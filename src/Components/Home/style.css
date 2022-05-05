@@ -1,0 +1,32 @@
+.Container-Comp-Home{
+    background-color: antiquewhite;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    
+    text-align: center;
+    height:300px;
+    width: 300px;
+    margin: 10px 10px 10px 10px;
+    text-transform: capitalize;
+    cursor:pointer;
+    
+   
+}
+
+.Container-Comp-Home img {
+    height:150px;
+    width:150px;
+}
+
+.Container-Comp-Home:hover{
+    background-color:rgba(255,255,255,0.400);
+    border:none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+  }
+

@@ -1,14 +1,14 @@
 import axios from 'axios';
 
 const http = axios.create({
-    baseURL:'https://pokeapi.co/api/v2/pokemon'
+    baseURL:'https://pokeapi.co/api/v2'
 })
 
 export const Api = {
 
     getAllPokemon: async () =>{
 
-        let response = await http.get('/');
+        let response = await http.get('/pokemon?offset=0&limit=8');
         let data = response.data.results;
         
         for(let i = 0; i < data.length; i++){
@@ -17,6 +17,16 @@ export const Api = {
         }
        
         return data;
+
+    },
+
+    getPokemonDetails: async (id:string) => {
+
+        let response = await http.get(`/pokemon/${id}`);
+        let data = response.data.name;
+        console.log(data);
+       
+
 
     }
 

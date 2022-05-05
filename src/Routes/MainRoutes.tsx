@@ -6,6 +6,6 @@ import { Home } from '../Pages/Home';
 export const MainRoutes = () =>{
     return useRoutes([
         { path:'/', element:<Home />},
-        { path:'/Details', element:<Details />},
+        { path:'/Details/:url', element:<Details  />},
     ])
 }
