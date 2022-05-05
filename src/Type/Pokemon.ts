@@ -3,3 +3,5 @@ export type TypePokemon = {
     url: string;
     img: string;
 }
+
+

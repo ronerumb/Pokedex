@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { PokemonDetails } from '../Type/PokemonDetails';
 
 const http = axios.create({
     baseURL:'https://pokeapi.co/api/v2'
@@ -20,11 +21,12 @@ export const Api = {
 
     },
 
-    getPokemonDetails: async (id:string) => {
+    getPokemonDetails: async (id:string):Promise<PokemonDetails> => {
 
-        let response = await http.get(`/pokemon/${id}`);
-        let data = response.data.name;
-        console.log(data);
+        let response = await http.get<PokemonDetails>(`/pokemon/${id}`);
+        
+        return response.data;
+        
        
 
 
